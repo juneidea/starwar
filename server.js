@@ -21,12 +21,15 @@ const getPeople = async () => {
   return people
 }
 
-const getPerson = (id) => {
+const getFilms = async () => {
+  let films = []
   try {
-    return axios.get(`https://swapi.co/api/people/${id}`)
+    let page = await axios.get(`https://swapi.co/api/films`)
+    films = [...page.data.results]
   } catch (error) {
     console.error(error)
   }
+  return films
 }
 
 const searchPerson = async (str) => {
@@ -51,9 +54,9 @@ app.get('/api/people', async (req, res) => {
   const allPeople  = await getPeople()
   res.json(allPeople);
 });
-app.get('/api/people/:id', async (req, res) => {
-  const person  = await getPerson(req.params.id)
-  res.json(person.data);
+app.get('/api/films', async (req, res) => {
+  const allFilms  = await getFilms()
+  res.json(allFilms);
 });
 app.get('/api/search/:s', async (req, res) => {
   const person  = await searchPerson(req.params.s)

@@ -5,11 +5,12 @@ p {
 a {
   margin: 0 15px;
 }
+.noline {
+  text-decoration: none;
+}
 .App {
   text-align: center;
-  z-index: 10;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -40,7 +41,10 @@ button:focus {outline:0;}
   position: relative;
   filter: alpha(opacity=30);
 }
-.App-link {
+.a-link {
+  color: #61dafb;
+}
+.b-link {
   color: #61dafb;
 }
 canvas {
@@ -56,6 +60,20 @@ canvas {
 }
 .hide {
   visibility: hidden;
+}
+.hidden {
+  visibility: hidden;
+  z-index: 0;
+}
+.contents {
+  position: relative;
+  left: 25%;
+}
+.characters {
+  position: absolute;
+}
+.films {
+  position: absolute;
 }
 
 @keyframes App-logo-spin {
