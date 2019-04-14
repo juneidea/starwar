@@ -30,8 +30,12 @@ a {
 button {
   padding: 10px;
   font-size: 18px;
-  border-radius: 5px
+  color: #eee;
+  border: solid 2px #eee;
+  border-radius: 5px;
+  background: rgba(255, 255, 255,0);
 }
+button:focus {outline:0;}
 .detail {
   position: relative;
   filter: alpha(opacity=30);
