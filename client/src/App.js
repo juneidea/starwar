@@ -134,11 +134,13 @@ render() {
             placeholder={this.state.movies[0] ? 'Ready to select!! or type to search' : '' }
           />
         <p className="opening">{this.state.movieOption ? `${this.state.movieOption.value.opening_crawl}` : ''}</p>
+        <div className="outline">
         {this.state.movieOption ? 
-          <div className="detail"><p> {`title: ${this.state.movieOption.value.title} `}</p><p>
+          <div className="detail2"><p> {`title: ${this.state.movieOption.value.title} `}</p><p>
           {` episode: ${this.state.movieOption.value.episode_id}`}</p><p> {`director: ${this.state.movieOption.value.director}`}</p><p> {`producer: ${this.state.movieOption.value.producer}`}</p><p> {`release date: ${this.state.movieOption.value.release_date}`}</p></div> : <div className="detail"></div>}
           </div>
           </div>
+        </div>
       </div>
     );
   }

@@ -41,6 +41,10 @@ button:focus {outline:0;}
   position: relative;
   filter: alpha(opacity=30);
 }
+.detail2 {
+  position: absolute;
+  bottom: -1vw;
+}
 .a-link {
   color: #61dafb;
 }
@@ -74,17 +78,26 @@ canvas {
 }
 .films {
   position: absolute;
+  height: 80vh;
+  overflow: hidden;
 }
 .opening {
   position: relative;
-  width: 242px;
-  top: -100px;
+  width: 50vw;
+  font-size: 3.5vw;
+  top: -43vw;
   margin: auto;
   color: #e9e16f;
   transform-origin: 50% 100%;
   -webkit-transform-origin: 50% 100%;
   transform: perspective(400px) rotateX(35deg);
   -webkit-transform: perspective(400px) rotateX(35deg);
+  height: 1000px;
+}
+.outline {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
